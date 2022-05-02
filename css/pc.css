@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* 미디어쿼리 속성을 사용하여 각 디바이스별 배경색 적용하기*/
+/*@mdeia screen and (가로크기 해상도){
+    선택자{속성값:값;}
+}*//*pc 화면*/
+/*@media screen and (min-width:1025px) {*/
+  
+/*상단헤더*/
+header{
+  width: 100%;
+  background-color: #fff;
+}
+.header_inner{
+  position: relative;
+  width: 1025px;height: 112px;
+  margin: 0px auto;
+  
+}
+.header_inner > h1{
+  width: 196px;
+  transform: translateY(10px);
+  position: relative;
+  z-index: 1000;
+}
+
+/*lnb서식*/
+.lnb{
+  position: absolute;
+  right: 0px; top: 15px;
+}
+.lnb > ul{display: flex;}
+
+.lnb > ul > li > a{
+  text-transform:uppercase;
+  font-size: 13px;
+  border-right: 1px solid #ccc;
+  padding: 0px 6px;
+  line-height: 22px;
+}
+.lnb > ul > li:nth-child(5) > a{
+  border: none;
+}
+.lnb > ul > li:nth-child(3) > a{
+  color: #e01883;
+}
+.lnb input[type=text]{
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.lnb i.fa-search{
+  font-size: 18px;
+  transform: translate(-22px, 2px);
+  color: #e01883;
+}
+label[for=search]{display: none;}
+/*메인메뉴 서식*/
+.gnb{
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255,255,255,0.9);
+  position: absolute;
+  left: 0px;
+  
+  transform: translateY(-40px);
+  overflow: hidden;/*서브가 않보이게*/
+  transition: 0.5s;
+  z-index: 12;
+
+}
+.gnb:hover{height: 260px;}
+.gnb > ul{
+  width: 1025px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  left: 20px;
+ 
+}
+.gnb > ul > li{
+  text-align: center;
+  margin: 0px 2%;
+  position: relative;
+}
+.gnb > ul >li > a{
+  font-size: 16px;
+  padding: 0px 10px;
+  display: block;
+  line-height: 40px;
+}
+.gnb > ul > li > a:hover{
+  text-decoration: none;
+  color: #224289;
+}
+.gnb > ul > li > a:after{
+  display: block;
+  content: "";
+  height: 2px;
+  background: #224289;
+  transform: translateY(-3px) scale(0);
+  transition: 0.3s;
+}
+.gnb > ul > li > a:hover:after{
+  transform: translateY(-3px) scale(1);
+}
+
+/*1. 매인메뉴에 마우스 오버시 해당 서브만 나오게 하기.개별적으로 나오게*/
+/*.gnb > ul > li:hover .sub{display: block;}*/
+/*2. 메인메뉴에 마우스 오버시 서브메뉴 한꺼번에 나오게*/
+/*.gnb > ul:hover > li.sub{display: block;}*/
+/*3.닷홈 방식*/
+.sub{
+  /*display: none;*/
+}
+
+/*서브메뉴 서식*/
+/*.sub{
+  display: none;
+}*/
+.sub > ul{
+
+}
+.sub > ul > li{}
+.sub > li > a{
+  line-height: 36px;
+  display: block;
+  font-size: 13px;
+}
+.sub > li > a:hover{
+  text-decoration: underline;
+}
+
+/*body{overflow-x: hidden;}*/
+.pc_slide{display: block;}
+.m_slide{display: none;}
+.slide{width: 100%}
+.slide > h2{display: none;}
+.cont > h2{display: none;}
+article{}
+article > h3{display: none;}
+
+.cont{
+  width: 1024px;
+  margin: 0px auto;
+  display: grid;
+  box-sizing: border-box;
+  grid-gap: 20px;
+  padding: 15px 22px;
+  grid-template-columns: 313px 313px 313px;
+  grid-template-areas:
+  "s_order b_writing tum"
+  "notice store news";
+}
+.cont img{width: 100%;}
+.s_order{
+  grid-area:s_order ;
+ text-align: center;
+}
+.b_writing{
+  grid-area: b_writing;
+  text-align: center;
+}
+.tum{
+  grid-area:tum;
+  text-align: center;
+  /*border: 1px solid #ccc;*/
+}
+.notice{
+  grid-area:notice ;
+  text-align: left;
+}
+.store{
+grid-area:store ;
+text-align: center;
+/*border: 1px solid #ccc;*/
+}
+.news{
+  grid-area:news ;
+  text-align: left;
+}
+.notice > h3, .news > h3{display: block;}
+
+/*공지사항,뉴스 공통서식*/
+.notice > h3, .news > h3{
+  font-family: "Times New Roman", 
+  Times, serif;
+  font-size: 23.5px;
+  border-bottom: 1px solid #333;
+  padding: 5px 0px;
+}
+
+article i.fa-plus{
+  border: 1px solid #333;
+  padding: 2px 3px 1px 3px;
+  font-size: 12px;
+  float: right;
+  transform: translateY(5px);
+}
+
+article > ul{padding-top: 6px;}
+article > ul > li{
+  width: 280px;
+  text-indent: 10px;
+  line-height: 220%;
+  /*생략기호 나오려면 3줄 다써야함*/
+  white-space: nowrap;/*글자가 무조건 한줄로 나옴*/
+  overflow: hidden;/*콘텐츠영역 숨김*/
+  text-overflow: ellipsis;/*생략기호 나오게함*/
+}
+article > ul > li:first-child a{
+  font-weight: 500;
+}
+.top01{
+  background-color: #aea498;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+}
+.top01:hover{
+  background-color:#e01883;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff; 
+}
+/*푸터 서식*/
+footer{
+  clear: right;/*위 영역에서 사용된 플로트속성 해지*/
+  border-top: 1px solid #333;
+  width: 1025px;
+  margin: 0px auto;
+  padding-top: 10px;
+  position: relative;/*기준*/
+}
+
+.f_lnb{padding-top: 10px;}
+.f_lnb > ul{
+  display: flex;
+}
+.f_lnb > ul  a{
+  padding: 0px 10px;
+  border-right: 1px solid #ccc;
+}
+.f_lnb > ul > li:nth-child(5) > a{
+  color: #e01883;
+}
+
+.f_lnb > ul > li:last-child > a{
+  border: none;
+}
+
+.f_lnb01{padding-top: 10px;}
+.f_lnb01 > ul{
+  display: flex;
+  justify-content: space-around;
+  margin: 25px;
+}
+.f_lnb01 > ul > li:last-child{
+  padding: 8px;
+}
+
+.sns{
+  position: absolute;
+  right: 0px;top: 10px;
+}
+.sns > ul{}
+.sns > ul > li{display: inline;}
+
+
+address{
+  padding: 5px 0px;
+  text-align: center;
+}
+address > p{
+  line-height: 15px;
+  font-style: normal;
+}
+.span01{color:#777;}
+
+
+
+/*}*/

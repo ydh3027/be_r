@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  <title>베스킨라빈스 - 반응형웹</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/br_kz6_icon.ico">
+  <script src="./script/prefixfree.min.js"></script>
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <link href="./css/base.css" rel="stylesheet" type="text/css">
+  <link href="./css/pc01.css" rel="stylesheet" type="text/css">
+  <link href="./css/tabl01.css" rel="stylesheet" type="text/css">
+  <link href="./css/mobile01.css" rel="stylesheet" type="text/css">
+  
+  <!--플렉스 슬라이드 : 순서대로 넣어야함(1.css 2.구글스크립트 3.스크립트)-->
+  <link href="./css/flexslider.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="./script/jquery.flexslider.js"></script>
+   
+  <!-- 6. 아이콘폰트 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">-->
+  
+</head>
+<body>
+<!--<button onclick="printDate()"><i class="fa-regular fa-calendar-check"></i></button>
+<P id="date"></P>-->
+  <input type="checkbox" id="toggle">
+  <header>
+    <div class="header_inner">
+      <h1>
+        <a href="index01.html" title="메인이미지로 바로가기">
+          <img src="./images/logo.png" alt="상단로고">
+        </a>
+      </h1>
+      <!--LNB-->
+      <nav class="lnb">
+        <ul>
+          <li><a href="introduction.html" title="introduction">introduction</a></li>
+          <li><a href="join.html" title="JOIN">JOIN</a></li>
+          <li><a href="login.html" title="LOGIN">LOGIN</a></li>
+          <li><a href="comunity.html" title="고객센터">고객센터</a></li>
+          <li><a href="contact.html" title="CONTACT US">CONTACT US</a></li>
+          <li>
+            <input type="text" id="search"><label for="search">검색</label>
+            <label>
+              <i class="fa-solid fa-search"></i>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    
+    <!--전체메뉴 버튼 : 테블릿과 모바일에서만 보임-->
+      <label for="toggle" class="total_btn">
+        <i class="fas fa-bars"></i>
+      </label>
+    
+      <!--모바일용 검색버튼-->
+      <i class="fas fa-search m_search"></i>
+    </div>
+    
+    <!--GNB-->
+    <nav class="gnb">
+      <h3>menu</h3>
+      <label for="toggle"><i class="fas fa-times"></i></label>
+      <ul>
+        <li><a href="mm.html" title="이 달의 맛">이 달의 맛<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li class="ice">
+              <a href="ice.html" title="아이스크림">
+                <img src="./images/img_monthly_fom_220228.png" alt="아이스크림" class="chatbox">
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="menu.html" title="MENU">MENU<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="menu.html" title="아이스크림">아이스크림</a></li>
+            <li><a href="icecake.html" title="아이스크림케이크">아이스크림케이크</a></li>
+            <li><a href="drink.html" title="음료">음료</a></li>
+            <li><a href="coff.html" title="커피">커피</a></li>
+            <li><a href="desert.html" title="디저트">디저트</a></li>
+          </ul>
+        </li>
+        <li><a href="kal.html" title="알레르기">알레르기<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="kal.html" title="아이스크림">아이스크림</a></li>
+            <li><a href="drink.html" title="음료">음료</a></li>
+            <li><a href="coff.html" title="커피">커피</a></li>
+          </ul>
+        </li>
+        <li><a href="event.html" title="EVENT">EVENT<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="event.html" title="진행중이벤트">진행중이벤트</a></li>
+            <li><a href="win.html" title="당첨자발표">당첨자발표</a></li>
+          </ul>
+        </li>
+        <li><a href="store.html" title="STORE">STORE<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="store.html" title="매장찾기">매장찾기</a></li>
+            <li><a href="custom.html" title="고객센터">고객센터</a></li>
+            <li><a href="g_order.html" title="단체주문">단체주문</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" title="ABOUT">ABOUT<i class="fas fa-angle-down"></i></a>
+          <ul class="sub">
+            <li><a href="about.html" title="공지사항">공지사항</a></li>
+            <li><a href="news.html" title="보도자료">보도자료</a></li>
+            <li><a href="job.html" title="채용정보">채용정보</a></li>
+            <li><a href="store_ask.html" title="점포개설문의">점포개설문의</a></li>
+            <li><a href="contact.html" title="CONTACT US">CONTACT US</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    
+  </header>
+  
+  <main>
+    <section class="slide">
+      <h2>슬라이드</h2>
+      <!-- Place somewhere in the <body> of your page -->
+      <!--pc 슬라이드-->
+      <div class="flexslider pc_slide">
+        <ul class="slides">
+          <li>
+            <a href="#" title="슬라이드01"><img src="./images/m_01.png" alt="main01" ></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드02"><img src="./images/m_02.jpg" alt="main02"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드03"><img src="./images/m_03.png" alt="main03"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드04"><img src="./images/m_04.png" alt="main04"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드05"><img src="./images/m_05.png" alt="main05"></a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <!--모바일 슬라이드-->
+      <div class="flexslider m_slide">
+        <ul class="slides">
+          <li>
+            <a href="#" title="슬라이드01"><img src="./images/bm01.png" alt="main01" ></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드02"><img src="./images/bm02.png" alt="main02"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드03"><img src="./images/bm03.png" alt="main03"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드04"><img src="./images/bm04.png" alt="main04"></a>
+          </li>
+          <li>
+            <a href="#" title="슬라이드05"><img src="./images/bm05.png" alt="main05"></a>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+    <section class="cont">
+      <h2>콘텐츠 2영역</h2>
+      <article class="s_order">
+        <h3>간편주문</h3>
+        <a href="#" title="간편주문"><img src="./images/banner01.png" alt="간편주문"></a>
+      </article>
+      <article class="bm">
+        <h3>배달의 민족</h3>
+        <a href="#" title="배달의 민족"><img src="./images/bm.png" alt="배달의 민족"></a>
+      </article>
+      <article class="ygy">
+        <h3>요기요</h3>
+        <a href="#" title="요기요"><img src="./images/ygy.png" alt="요기요"></a>
+      </article>
+      <article class="b_write">
+        <h3>후기</h3>
+        <ul>
+          <li><a href="#" title="b1"><img src="./images/s01.jpg" alt="b1"></a></li>
+          <li><a href="#" title="b2"><img src="./images/s02.jpg" alt="b2"></a></li>
+          <li><a href="#" title="b3"><img src="./images/s03.jpg" alt="b3"></a></li>
+          <li><a href="#" title="b4"><img src="./images/s04.jpg" alt="b4"></a></li>
+          
+      </ul>
+      </article>
+      <article class="notice">
+        <h3>notice<i class="fas fa-plus"></i></h3>
+        <ul>
+          <li><a href="#" title="">단체주문도 언제, 어디서나 배스킨라빈스!</a></li>
+          <li><a href="#" title="">배스킨라빈스의 1월 신규 MD를 만나보세요!</a></li>
+          <li><a href="#" title="">배스킨라빈스의 스페셜 MD를 만나보세요!</a></li>
+          <li><a href="#" title="">Taste the Original 새로워진 그린티, 31요거트!</a></li>
+          <li><a href="#" title="">[신제품 출시] 밀탑의 시그니처 국내산 팥으로 더욱 맛있어진 팥빙수 블라스트 출시!</a></li>
+          <li><a href="#" title="">[신제품 출시] 베라 빙수를 즐겨 보세요! 밀탑의 시그니처 국내산 팥. </a></li>
+          <li><a href="#" title="">[신제품 출시] 워터프로세스 방식으로 풍미는 보존, 카페인은 제거한 디카페인 출시!</a></li>
+          <li><a href="#" title="">[신제품 출시] 달콤한 연유와 딸기 과육이 들어있는 딸기 연유라떼 출시!</a></li>
+        </ul>
+      </article>
+      <article class="event quadrado01">
+        <h3>이벤트</h3>
+        <ul>
+          <li><a href="#" title="이벤트"><img src="./images/img01.png" alt="이벤트"></a></li>
+          <li><a href="#" title="칭찬점포"><img src="./images/banner02.png" alt="칭찬점포"></a></li>
+          <li><a href="#" title="텀블러"><img src="./images/img02.png" alt="텀블러"></a></li>
+          <li><a href="#" title="신제품"><img src="./images/bm_02.png" alt="신제품"></a></li>
+      </ul>
+      </article>
+      <article class="tum">
+        <h3>텀블러</h3>
+        <ul>
+          <li><a href="#" title="t1"><img src="./images/s07.jpg" alt="t1"></a></li>
+          <li><a href="#" title="t2"><img src="./images/s08.jpg" alt="t2"></a></li>
+          <li><a href="#" title="t3"><img src="./images/s09.jpg" alt="t3"></a></li>
+          <li><a href="#" title="t4"><img src="./images/s10.jpg" alt="t4"></a></li>
+      </ul>
+      </article>
+      <article class="news">
+        <h3>news<i class="fas fa-plus"></i></h3>
+        <ul>
+          <li><a href="#" title="">윌라를 찾아라 닮은꼴 콘테스트 당첨자 발표</a></li>
+          <li><a href="#" title="">개인정보처리 방침 변경 안내</a></li>
+          <li><a href="#" title="">[신제품 출시]아이스크림과 즐기는 베스킨라빙수 출시</a></li>
+          <li><a href="#" title="">베라를 배달로 먹방 콘테스트 수상자 발표</a></li>
+          <li><a href="#" title="">6월 이달의 맛 선거 투표 결과 발표</a></li>
+          <li><a href="#" title="">[신제품 출시]깔끔한 산미와 따사로운 햇살같은 커피원두 파페브리즈 써니 출시!</a></li>
+          <li><a href="#" title="">[신제품 출시]배스킨라빈스 커피와 함께하는 특별한 시간을 즐겨보세요</a></li>
+          <li><a href="#" title="">[신제품 출시]와츄원 쉐이크의 변신! 버블 와츄원 쉐이크</a></li>
+        </ul>
+      </article>
+      <article class="store">
+        <h3>스토어</h3>
+        <a href="#" title="매장찾기"><img src="./images/store.jpg" alt="매장찾기"></a>
+      </article>
+      <article class="order quadrado">
+        <h3>주문</h3>
+        <ul>
+          <li><a href="#" title="SIZE UP"><img src="./banner/banner_01.jpg" alt="SIZE UP"></a></li>
+          <li><a href="#" title="5+1"><img src="./banner/banner_02.jpg" alt="5+1"></a></li>
+          <li><a href="#" title="cafe BRis"><img src="./banner/banner_03.jpg" alt="cafe BRis"></a></li>
+          <li><a href="#" title="할인"><img src="./banner/banner_04.jpg" alt="할인"></a></li>
+          
+        </ul>
+      </article>
+    </section>
+    
+  </main>
+  
+  <footer>
+    <nav class="f_lnb">
+      <ul>
+        <li><a href="#" title="점포개설문의">점포개설문의</a></li>
+        <li><a href="#" title="채용문의">채용문의</a></li>
+        <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+        <li><a href="#" title="이용약관">이용약관</a></li>
+        <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+        <li><a href="#" title="영상정보처리기기운영관리방침">영상정보처리기기운영관리방침</a></li>
+        <li><a href="#" title="거래희망회사 사전등록">거래희망회사 사전등록</a></li>
+      </ul>
+    </nav>
+    <nav class="f_lnb01">
+      <ul>
+        <li><a href="h_p.html" title="해피포인트"><img src="./images/btn_happypoint.png" alt="해피포인트"></a></li>
+        <li><a href="h_m.html" title="해피마켓"><img src="./images/btn_happymarket.png" alt="해피마켓"></a></li>
+        <li><a href="spc.html" title="SPC"><img src="./images/btn_spc_story.png" alt="spc"></a></li>
+        <li>
+          <a href="n.html" title="Norton"><img src="./images/btn_norton.gif" alt="Norton"></a>
+        </li>
+        <li>
+          <select onchange="siteurl(this)" >
+            <option value="a.html">FAMILY SITE</option>
+            <option value="https://www.spc.co.kr/">SPC그룹사이트</option>
+            <option value="https://www.spcmagazine.com/">SPCMAGAZINE</option>
+            <option value="https://www.brkorea.co.kr/">BR코리아</option>
+            <option value="https://www.happypointcard.com/">해피포인트카드</option>
+            <option value="https://www.caffe-pascucci.co.kr/">파스쿠찌</option>
+            <option value="https://spcsamlip.co.kr/">삼립</option>
+            <option value="https://www.paris.co.kr/">파리바게트</option>
+            <option value="https://www.dunkindonuts.co.kr/">던킨도너츠</option>
+          </select>
+        </li>
+      </ul>
+    <a href="#" title="위로가기" class="top"><img src="./images/top.png" alt="top"></a>
+      <ul class="f_logo">
+        <li><img src="./images/footer_logo.png" alt="푸터로고"></li>
+      </ul>
+    </nav>
+   
+    <nav class="sns">
+      <ul>
+        <li><a href="f.html" title="페이스북"><img src="./images/icon_facebook.png" alt="페이스북"></a></li>
+        <li><a href="t.html" title="트위터"><img src="./images/icon_twitter.png" alt="트위터"></a></li>
+        <li><a href="b.html" title="블로그"><img src="./images/icon_blog.png" alt="블로그"></a></li>
+        <li><a href="i.html" title="인스타그램"><img src="./images/icon_instgram.png" alt="인스타그램"></a></li>
+        <li><a href="y.html" title="유트브"><img src="./images/icon_youtube.png" alt="유트브"></a></li>
+      </ul>
+    </nav>
+    <address>
+      <p>사업자등록번호 : 303-81-09535  &amp; 비알코리아(주)대표이사도세호 &amp; 서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</p>
+      <p>
+        <a href="tel:080-555-3131" title="TEL : 080-555-3131">TEL : 080-555-3131</a>
+        개인정보관리책임자:김경우
+      </p>
+      <p><span class="span01">Copyright&copy;2016 BRKOREA Company. All rights reserved.</span></p>
+    </address>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "slide"
+      });
+    });
+
+    function siteurl(a){//함수
+      //alert('사용자가 목록을 선택하였습니다.');
+      if(a.value!='none'){//만약에 사용자가 선택한 항목에 데이터url값이 존재하느냐? 값이 있을때만 아래 내용실행.
+        window.open(a.value, '_self');//해당 url주소로 현재창에서 이동한다.
+      }else{//그렇지 않으면 ==사용자가 선택을 안하거나 familysite메뉴를 누른경우
+        return;//아무일도 일어나지 않는다
+      }
+    }
+    //function printDate(){
+      //document.getElementById("date").innerHTML=Date();
+    //}
+    
+    window.alert('환영합니다');
+
+    var swiper = new Swiper(".mySwiper", {
+        watchSlidesProgress: true,
+        slidesPerView: 5,
+      });
+
+  </script>
+
+</body>
+</html>
